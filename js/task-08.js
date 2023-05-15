@@ -3,18 +3,18 @@ const form = document.querySelector('.login-form');
 form.addEventListener('submit', function(event) {
   event.preventDefault();
 
-  const email = form.elements.email.value;
-  const password = form.elements.password.value;
+  const email = event.currentTarget.elements.email.value;
+  const password = event.currentTarget.elements.password.value;
 
   if (email.trim() === '' || password.trim() === '') {
-    alert('Todos los espacios deben ser rellenados');
-  } else {
+    return alert('Todos los espacios deben ser rellenados');
+  }  
+  
     const data = {
       email,
       password
     };
     console.log(data);
 
-    form.reset();
-  }
+    event.currentTarget.reset();
 });

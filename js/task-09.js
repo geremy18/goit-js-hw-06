@@ -1,4 +1,4 @@
-const button = document.querySelector('.change-color');
+ const button = document.querySelector('.change-color');
 const span = document.querySelector('.color');
 
 button.addEventListener('click', function() {
